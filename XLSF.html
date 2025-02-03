@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windows Login</title>
+    <style>
+        body {
+            background: url('blurredwallpaper.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI Light', sans-serif;
+        }
+        .login-box {
+            text-align: center;
+            color: white;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('user.png') no-repeat center center;
+            background-size: cover;
+            margin: 0 auto 10px;
+        }
+        .user-name {
+            margin-bottom: 10px;
+            font-size: 2em; /* Increased font size */
+        }
+        .login-box input {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .hint {
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="profile-pic"></div>
+        <div class="user-name">Unlock the PC</div>
+        <input type="password" id="password" placeholder="PIN" onkeydown="if(event.key === 'Enter') checkPassword()">
+        <div id="hint" class="hint"></div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === '26102021') {
+                window.location.href = 'desktop.html';
+            } else {
+                document.getElementById('hint').innerText = 'Hint: our anniversary date in DDMMYYYY format ⸜(｡˃ ᵕ ˂ )⸝♡';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desktop Screen</title>
+    <style>
+        body {
+            background: url('desktopwallpaper.png') no-repeat top center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+        }
+        .desktop-content {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .taskbar {
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            padding-left: 10px;
+        }
+        .taskbar img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            margin-right: 30px; /* Increased spacing */
+            transition: transform 0.2s, filter 0.2s, box-shadow 0.2s, background-color 0.2s; /* Smooth transition for hover effect */
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .taskbar img:first-child {
+            margin-left: 20px; /* Add spacing to the left of the first icon */
+        }
+        .taskbar img:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+            background-color: rgba(255, 255, 255, 0.2); /* Add a slight background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-content">
+        <!-- Add more desktop content here -->
+    </div>
+    <div class="taskbar">
+        <img src="windowsicon.png">
+        <img src="searchicon.png">
+        <img src="fileexplorer.png">
+        <img src="chromeicon.png">
+        <img src="hearticon.png" onclick="openHeart()">
+    </div>
+
+    
+    <script>
+        function openHeart() {
+            window.location.href = 'wordsearch.html'; 
+        }
+    </script>
+</body>
+</html>

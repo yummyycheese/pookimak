@@ -1,0 +1,194 @@
+* {
+
+	text-align: center;
+	font-family:  "Moon", Arial, sans serif;
+	font-weight: normal;
+
+}
+
+h1, h2, #wordTheme, #solveButton, #newGameButton, .listWord {
+
+	padding: 5px;
+
+}
+
+h1, h2, #wordTheme, #solveButton, #newGameButton {
+
+	border: 2px black solid;
+	border-radius: 8px;
+
+} 
+
+h1, h2, .cell, #wordTheme, #wordlist {
+
+	background-color: white;
+
+}
+
+h1, h2 {
+
+	margin: 10px auto 10px auto;
+	display: table;
+
+}
+
+body {
+
+	background-color: #FFD1DC;
+
+}
+
+#wordTheme {
+
+	border-radius: 8px;
+
+}
+
+#wordboard {
+
+	margin: 20px auto 0 auto;
+	border: 2px black solid;
+	display: table;
+	min-width: 300px;
+
+}
+
+.boardRow {
+
+	display: table-row;
+
+}
+
+.cell {
+
+	margin: 0 auto;
+	border: none;
+	display: table-cell;
+	height:40px;
+	width: 40px;
+	font-size: 23px;
+	padding: 0;
+	outline: 0;
+
+	/*ensures text can't be accidentally selected*/
+	cursor: default; 
+	-moz-user-select: none;
+    -ms-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
+
+}
+
+.cell:hover {
+
+	background-color: rgb(151, 141, 242);
+
+}
+
+.cell.selectable {
+
+	background-color: rgb(206, 206, 234);
+
+}
+
+.cell.selected { 
+
+	background-color: rgb(106, 90, 205);
+
+}
+
+.cell.found {
+
+	background-color: rgb(158, 123, 158);
+	border: 1px black solid;
+	font-weight: bold;
+
+}
+
+#wordlist { 
+
+	margin: 30px auto  auto;
+	border: 2px black solid;
+	display: table;
+	min-width: 400px;
+	min-height: 80px;
+	font-size: 17px;
+	text-align: center;
+	
+}
+
+.listRow {
+
+	display: table-row;
+
+}
+
+.listWord {
+
+	display: table-cell;
+	padding: 10px; /* Adjust the padding as needed */
+    margin: 5px;  /* Adjust the margin as needed */
+	
+}
+
+.listWord.found {
+
+	color: rgb(158, 123, 158);
+	text-decoration: line-through;
+	
+}
+
+#solveButton, #newGameButton {
+
+	background-color: rgb(255, 129, 160);
+	margin: 20px auto 20px auto;
+	display: block;
+	outline: 0;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+@font-face {
+
+	font-family: "Moon";
+	src: url("../fonts/Moon-Regular.woff2") format("woff2"),
+		 url("../fonts/Moon-Regular.woff") format("woff");
+	font-weight: normal;
+
+}
+
+@font-face {
+
+	font-family: "Moon";
+	src: url("../fonts/Moon-Bold.woff2") format("woff2"),
+		 url("../fonts/Moon-Bold.woff") format("woff");
+	font-weight: bold;
+
+}
+
+
+.hint-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 15px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    font-size: 16px; /* Increase font size */
+    margin: 10px 10px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.hint-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.hint-container {
+    text-align: center;
+	width: 100%; 
+}
